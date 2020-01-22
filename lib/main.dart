@@ -5,7 +5,7 @@ void main(){
     title: "Contador de pessoas",
     home: Column(
       children: <Widget>[
-        Text("Pessoas: 0", 
+        Text("Pessoas: 20", 
           style: TextStyle(
             color: Colors.white, 
             fontWeight: FontWeight.bold
