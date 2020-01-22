@@ -2,21 +2,23 @@ import 'package:flutter/material.dart';
 
 void main(){
   runApp(MaterialApp(
-    title: "Contador de pessoas",
-    home: Column(
-      children: <Widget>[
-        Text("Pessoas: 30", 
-          style: TextStyle(
-            color: Colors.white, 
-            fontWeight: FontWeight.bold
-          )
-        ),
-        Text("Pode entrar 123",
-          style: TextStyle(color: Colors.white,
-                 fontStyle: FontStyle.italic,
-                 fontSize: 30),
-        )
-      ],
-    )
+    home: Home(),
   ));
+}
+
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Calculadora de IMC"),
+        centerTitle: true,
+      ),
+    );
+  }
 }
