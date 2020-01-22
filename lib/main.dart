@@ -18,7 +18,72 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text("Calculadora de IMC"),
         centerTitle: true,
+        backgroundColor: Colors.green,
+        actions: <Widget>[
+          IconButton(
+            icon:Icon(Icons.refresh),
+          onPressed:(){} ,)
+        ],
       ),
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        padding: EdgeInsets.fromLTRB(15.0, 15.0, 15.0, 0.0),
+        child:  Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Icon(Icons.person_outline, size: 120.0, color: Colors.green,),
+
+
+            TextField(
+              keyboardType:TextInputType.number,
+              decoration: InputDecoration(
+                labelText: "Peso (Kg)",
+                labelStyle: TextStyle(color: Colors.green)
+              ),
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.green, fontSize: 25),
+              ),
+
+
+            TextField(
+              keyboardType:TextInputType.number,
+              decoration: InputDecoration(
+                labelText: "Altura (cm)",
+                labelStyle: TextStyle(color: Colors.green)
+              ),
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.green, fontSize: 25),
+            ),
+
+            Padding(
+              padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
+              child:  Container(
+                height: 50.0,
+                child:  RaisedButton(
+                  onPressed: (){},
+                  child: Text("Calcular", style: TextStyle(fontSize: 25.0),),
+                  color: Colors.green,
+                  textColor: Colors.white,
+                ),
+              ),
+            
+            ),
+
+           
+
+            Text("Info:", textAlign: TextAlign.center, style: TextStyle(color: Colors.green, fontSize: 25.0),)
+
+          
+
+
+
+          ],
+      ), 
+        )
+      
+      
+      
+   
     );
   }
 }
